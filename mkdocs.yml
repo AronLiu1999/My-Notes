@@ -1,0 +1,141 @@
+site_name: Yilun的笔记
+site_url: https://mynotes.yilunliu.site/
+site_description: Yilun的笔记本
+copyright: Copyright © 2022 <a href="https://blog.yilunliu.site">Yilun</a>
+repo_name: 'yilunliu/mynotes'
+repo_url: 'https://github.com/Liuyilun1999/mynotes'
+edit_uri: edit/master/docs/
+site_author: Yilun Liu
+
+
+theme:
+  name: 'material'
+  language: 'zh'
+  custom_dir: overrides
+  favicon: assets/images/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/note-text
+  palette:
+    # - primary: 'blue gray'
+    # - accent: 'teal'
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: "blue grey"
+      accent: "teal"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "blue grey"
+      accent: "teal"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+          #font:
+          #text: JetBrains Mono
+          #code: JetBrains Mono
+  features:
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.sections # nav节点缩进
+    - navigation.expand # 不折叠左侧nav节点
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - toc.integrate # 右侧生产目录
+    - navigation.top # 一键回顶部
+    - header.autohide
+    - announce.dismiss
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:<yilun.liu@zju.edu.cn>
+      name: 发邮件联系我
+    - icon: fontawesome/brands/github
+      link: https://github.com/Liuyilun1999
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - javascripts/baidu_tongji.js
+
+markdown_extensions:
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - footnotes #脚注
+  - pymdownx.keys
+  - admonition  # 提示块/注解
+  - footnotes  # 脚注
+  - meta  # 定义元数据，通过文章上下文控制，如disqus
+  - pymdownx.caret  # 下划线上标
+  - pymdownx.tilde  # 删除线下标
+  - pymdownx.critic  # 增加删除修改高亮注释，可修饰行内或段落
+  - pymdownx.details  # 提示块可折叠
+  - pymdownx.inlinehilite  # 行内代码高亮
+  - pymdownx.mark  # 文本背景高亮
+  - pymdownx.smartsymbols  # 符号转换
+  - pymdownx.snippets
+  - pymdownx.superfences  # 代码嵌套在列表里
+  - codehilite:    # 代码高亮，显示行号
+      guess_lang: true
+      linenums: true
+  - toc:  # 锚点
+      permalink: ‍💨
+      toc_depth: 4
+  - tables
+  - pymdownx.arithmatex: # 数学公式
+      generic: true
+  - pymdownx.betterem:  # 对加粗和斜体更好的检测
+      smart_enable: all
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:  # 表情
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.magiclink  # 自动识别超链接
+  - pymdownx.tasklist:  # 复选框checklist
+ #     custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-]'
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+nav:
+  - 主页: index.md
+  - 课程:
+    - MIT6.NULL:
+      - Notes: Notes/Courses/Tools/Course_Notes.md
+      - Exercise: Notes/Courses/Tools/Exercises.md
+  - 习惯养成:
+    - PhD Advising: Notes/Habit/Phd_Advising.md
+    - Learning Skills: Notes/Habit/study.md
+    - TED: Notes/Habit/TED.md
+  - 论文阅读:
+    - Serverless AI:
+      - "INFless: a native serverless system for low-latency, high-throughput inference": Notes/Papers/Serverless/INFless.md
+      - 'Serverless Data Science–Are We There Yet? A Case Study of Model Serving': Notes/Papers/Serverless/Serverless Data Science.md
+    - Cloud-Edge Collaboration:
+      - Device-cloud Collaborative Recommendation via Meta Controller: Notes/Papers/Cloud-Edge Collaboration/Device-cloud Collaborative Recommendation via Meta Controller.md
+      - On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption: Notes/Papers/Cloud-Edge Collaboration/On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption.md
+    - Knowledge Distillation:
+      - 深度学习中知识蒸馏研究综述: Notes/Papers/Knowledge Distillition/深度学习中知识蒸馏研究综述_计算机学报.md 
+  - 杂项:
+    - Domain Adaption: Notes/Other/Domain_Adaption.md
+    - Wasserstein Distance: Notes/Other/Wasserstein距离.md
+        
