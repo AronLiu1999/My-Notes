@@ -1,0 +1,9 @@
+@font-face {
+    font-family: WenKai;
+    src: url('LXGWWenKai-Regular.ttf');
+}
+
+:root {
+    --md-text-font: WenKai;
+    --md-code-font: WenKai;
+}

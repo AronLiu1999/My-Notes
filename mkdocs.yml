@@ -1,10 +1,9 @@
-site_name: Yilun的笔记
+site_name: Yilun's Notes
 site_url: https://mynotes.yilunliu.site/
 site_description: Yilun的笔记本
-copyright: Copyright © 2022 <a href="https://blog.yilunliu.site">Yilun</a>
+copyright: Copyright © 2022-2023 <a href="https://blog.yilunliu.site">Yilun</a>
 repo_name: 'yilunliu/mynotes'
-repo_url: 'https://github.com/Liuyilun1999/mynotes'
-edit_uri: edit/master/docs/
+repo_url: 'https://github.com/AronLiu1999/My-Notes'
 site_author: Yilun Liu
 
 
@@ -13,6 +12,7 @@ theme:
   language: 'zh'
   custom_dir: overrides
   favicon: assets/images/favicon.png
+  font: false
   icon:
     repo: fontawesome/brands/github
     logo: material/note-text
@@ -24,18 +24,15 @@ theme:
       primary: "blue grey"
       accent: "teal"
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: "blue grey"
       accent: "teal"
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-3
         name: Switch to light mode
-          #font:
-          #text: JetBrains Mono
-          #code: JetBrains Mono
   features:
     - navigation.tracking # 在url中使用标题定位锚点
     - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
@@ -58,7 +55,8 @@ extra:
   generator: false
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/zoomImage.css
+  - stylesheets/customFonts.css
 
 extra_javascript:
   - javascripts/extra.js
@@ -134,7 +132,7 @@ nav:
       - Device-cloud Collaborative Recommendation via Meta Controller: Notes/Papers/Cloud-Edge Collaboration/Device-cloud Collaborative Recommendation via Meta Controller.md
       - On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption: Notes/Papers/Cloud-Edge Collaboration/On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption.md
     - Knowledge Distillation:
-      - 深度学习中知识蒸馏研究综述: Notes/Papers/Knowledge Distillition/深度学习中知识蒸馏研究综述_计算机学报.md 
+      - 深度学习中知识蒸馏研究综述: Notes/Papers/Knowledge Distillation/深度学习中知识蒸馏研究综述_计算机学报.md 
   - 杂项:
     - Domain Adaption: Notes/Other/Domain_Adaption.md
     - Wasserstein Distance: Notes/Other/Wasserstein距离.md
