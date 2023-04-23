@@ -34,6 +34,13 @@ theme:
         icon: material/brightness-3
         name: Switch to light mode
   features:
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
     - navigation.tracking # 在url中使用标题定位锚点
     - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
     - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
@@ -65,6 +72,8 @@ extra_javascript:
 
 markdown_extensions:
   - def_list
+  - pymdownx.betterem:
+      smart_enable: all
   - attr_list
   - md_in_html
   - sane_lists
@@ -115,15 +124,17 @@ plugins:
       fallback_to_build_date: true
 
 nav:
-  - 主页: index.md
-  - 课程:
+  - Home: index.md
+  - Courses:
     - MIT6.NULL:
       - Notes: Notes/Courses/Tools/Course_Notes.md
       - Exercise: Notes/Courses/Tools/Exercises.md
-  - 习惯养成:
+  - Habit:
     - PhD Advising: Notes/Habit/Phd_Advising.md
     - Learning Skills: Notes/Habit/study.md
     - TED: Notes/Habit/TED.md
+  - Machine Learning:
+    - Matrix Differentiation: Notes/Machine_Learning/Matrix_Differentiation.md
   - 论文阅读:
     - Serverless AI:
       - "INFless: a native serverless system for low-latency, high-throughput inference": Notes/Papers/Serverless/INFless.md
