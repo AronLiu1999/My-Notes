@@ -16,13 +16,14 @@ $$
 d y = \langle \nabla_{\mathbf{x}} f, d \mathbf{x} \rangle = \nabla_{\mathbf{x}} f^T d \mathbf{x}
 $$
 
-!!! Differential V.S. Derivative
+???+ note "Differential V.S. Derivative"
     - Differential: the infinitesimal difference in varying variables
     - Derivative: the rate of change of a function with respect to the changes variables
 
 ### Matrix Derivative of a Scalar Function
 
 Let $y = f(\mathbf{X})$, where $\mathbf{X}$ is a $m \times n$ matrix, we have the total differential of $y$ as
+
 $$
 d f=\sum_{i=1}^m \sum_{j=1}^n \frac{\partial f}{\partial X_{i j}} d X_{i j}
 $$
@@ -61,10 +62,15 @@ $$
 8. Kronecker product: $d \left( \mathbf{X} \otimes \mathbf{Y}\right) = d \mathbf{X} \otimes \mathbf{Y} + \mathbf{X} \otimes d \mathbf{Y}$
 9. $d \sigma \left( \mathbf{X} \right) = \sigma '\left(\mathbf{X} \right) \otimes d \mathbf{X}$, where $\sigma(\mathbf{X}) = [\sigma(\mathbf{X}_{i j})]$
 
-!!! warning Prove $d \mathbf{X}^{-1} = -\mathbf{X}^{-1} \left(d \mathbf{X}\right)\mathbf{X}^{-1}$
-    $\mathbf{X} \mathbf{X}^{-1} = \mathbf{I}$
+???+ question "How to prove $d \mathbf{X}^{-1} = -\mathbf{X}^{-1} \left(d \mathbf{X}\right)\mathbf{X}^{-1}$"
 
-    $d \mathbf{X} \mathbf{X}^{-1}  = \left(d \mathbf{X} \right) \mathbf{X} ^ {-1} + \mathbf{X} d \mathbf{X} ^ {-1} = d \mathbf{I} = 0$
+    $$
+    \mathbf{X} \mathbf{X}^{-1} = \mathbf{I}
+    $$
+
+    $$
+    d \mathbf{X} \mathbf{X}^{-1}  = \left(d \mathbf{X} \right) \mathbf{X} ^ {-1} + \mathbf{X} d \mathbf{X} ^ {-1} = d \mathbf{I} = 0
+    $$
 
 ## Matrix Function
 
@@ -113,9 +119,11 @@ $$
  \nabla_{\mathbf{X}} \mathbf{Y} = \frac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \nabla_{\operatorname{vec}(\mathbf{X})} \operatorname{vec}(\mathbf{Y}) = \frac{\partial \operatorname{vec}(\mathbf{Y})}{\partial \operatorname{vec}(\mathbf{X})}
 $$
 
-!!! note The Definition of Vectorization
-    Given $\mathbf{X} \in \mathbb{R}^{m \times n}$, $\operatorname{vec}(\mathbf{X})$ is an $mn \times 1$ vector, where $\operatorname{vec}(\mathbf{X})$ is defined as 
-    $$ \operatorname{vec} (\mathbf{X}) = [X_{11}, X_{21}, \cdots ,X_{m1}, X_{21},X_{22},  \cdots, X_{m2}, \cdots, X_{1n}, X_{2n}, \cdots , X_{mn}]$$
+???+ note "The Definition of Vectorization"
+    Given $\mathbf{X} \in \mathbb{R}^{m \times n}$, $\operatorname{vec}(\mathbf{X})$ is an $mn \times 1$ vector, where $\operatorname{vec}(\mathbf{X})$ is defined as
+
+    $$ \operatorname{vec} (\mathbf{X}) = [X_{11}, X_{21}, \cdots ,X_{m1}, X_{21},X_{22},  \cdots, X_{m2}, \cdots, X_{1n}, X_{2n}, \cdots , X_{mn}]
+    $$
 
 The total differential of $\operatorname{vec}(\mathbf{Y})$ w.r.t $\operatorname{vec}(\mathbf{X})$ is
 
@@ -127,10 +135,12 @@ $$
 
 - $\operatorname{vec}(\mathbf{AXB}) = (\mathbf{B}^T \otimes \mathbf{A}) \operatorname{vec}(\mathbf{X})$
 - $\operatorname{vec}(\mathbf{X}^T)  = \mathbf{C}_{mn} \operatorname{vec}(\mathbf{X})$
-    
-    where $\otimes$ is Kronecker product and $\mathbf{C}_{mn}$ is commutation matrix, it can be computed by
-     $$\mathbf{C}_{mn} = \sum_{i=1}^m \sum_{j=1}^n E_{ij} (m) \otimes E_{ji} (n)$$
 
+    where $\otimes$ is Kronecker product and $\mathbf{C}_{mn}$ is commutation matrix, it can be computed by
+
+$$
+\mathbf{C}_{mn} = \sum_{i=1}^m \sum_{j=1}^n E_{ij} (m) \otimes E_{ji} (n)
+$$
 
 ## Unique Skill
 

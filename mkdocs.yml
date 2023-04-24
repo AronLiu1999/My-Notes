@@ -122,7 +122,9 @@ plugins:
       locale: zh
       enable_creation_date: true
       fallback_to_build_date: true
-
+  - mkdocs-jupyter: ##Jupyter Notebook支持
+      execute: true
+      include_source: true
 nav:
   - Home: index.md
   - Courses:
@@ -134,6 +136,8 @@ nav:
     - Learning Skills: Notes/Habit/study.md
     - TED: Notes/Habit/TED.md
   - Machine Learning:
+    - Made With ML:
+      - PyTorch: Notes/Machine_Learning/Made_With_ML/PyTorch.ipynb
     - Matrix Differentiation: Notes/Machine_Learning/Matrix_Differentiation.md
   - 论文阅读:
     - Serverless AI:
