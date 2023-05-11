@@ -123,7 +123,7 @@ plugins:
       enable_creation_date: true
       fallback_to_build_date: true
   - mkdocs-jupyter: ##Jupyter Notebook支持
-      execute: true
+      execute: false
       include_source: true
 nav:
   - Home: index.md
@@ -132,14 +132,16 @@ nav:
       - Notes: Notes/Courses/Tools/Course_Notes.md
       - Exercise: Notes/Courses/Tools/Exercises.md
   - Habit:
+    - 学术研究，你的成功之道: Notes/Habit/学术研究_你的成功之道.md
     - PhD Advising: Notes/Habit/Phd_Advising.md
     - Learning Skills: Notes/Habit/study.md
     - TED: Notes/Habit/TED.md
   - Machine Learning:
+    - Probability Theory: 概率相关.md
     - Made With ML:
       - PyTorch: Notes/Machine_Learning/Made_With_ML/PyTorch.ipynb
     - Matrix Differentiation: Notes/Machine_Learning/Matrix_Differentiation.md
-  - 论文阅读:
+  - Papers:
     - Serverless AI:
       - "INFless: a native serverless system for low-latency, high-throughput inference": Notes/Papers/Serverless/INFless.md
       - 'Serverless Data Science–Are We There Yet? A Case Study of Model Serving': Notes/Papers/Serverless/Serverless Data Science.md
@@ -148,7 +150,7 @@ nav:
       - On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption: Notes/Papers/Cloud-Edge Collaboration/On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption.md
     - Knowledge Distillation:
       - 深度学习中知识蒸馏研究综述: Notes/Papers/Knowledge Distillation/深度学习中知识蒸馏研究综述_计算机学报.md 
-  - 杂项:
+  - Others:
     - Domain Adaption: Notes/Other/Domain_Adaption.md
     - Wasserstein Distance: Notes/Other/Wasserstein距离.md
         

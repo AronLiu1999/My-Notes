@@ -1,9 +1,16 @@
 @font-face {
-    font-family: WenKai;
+    font-family: "myfonts";
     src: url('LXGWWenKai-Regular.ttf');
+    unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+    font-family: "myfonts";
+    src: url("JetBrainsMono-Regular.ttf");
+    unicode-range: U+00-024F
 }
 
 :root {
-    --md-text-font: WenKai;
-    --md-code-font: WenKai;
+    --md-text-font: "myfonts";
+    --md-code-font: "myfonts";
 }

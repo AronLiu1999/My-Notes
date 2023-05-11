@@ -14,8 +14,6 @@
 ## Why the Model Works on New Data
 
 
-
-
 ## SVM
 
 What is Support Vectors?
